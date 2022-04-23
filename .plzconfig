@@ -1,0 +1,17 @@
+[please]
+version = 16.20.2
+
+[parse]
+preloadsubincludes = ///js//build_defs:javascript
+
+[plugin "js"]
+target = //:js
+packagejson = //third_party/js:package_json
+tsconfig = //:tsconfig
+tsc = //third_party/js:tsc_tool
+jest = //third_party/js:jest_tool
+jesttypes = //third_party/js:@types_jest
+jestconfig = //:jest_config
+jestmodulemappers = //build/js/testing:styleMock
+esbuildlibrary = //third_party/js:esbuild
+
