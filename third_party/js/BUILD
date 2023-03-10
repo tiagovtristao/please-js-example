@@ -1,9 +1,4 @@
-filegroup(
-    name = "package_json_build_def",
-    srcs = ["package_json.build_defs"],
-)
-
-subinclude(":package_json_build_def")
+subinclude("//third_party/js/build_defs:package_json")
 
 load_package_json(name = "package_json")
 

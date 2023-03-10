@@ -1,3 +1,5 @@
+subinclude("//copperkey/build_defs:ts_project")
+
 ts_module(
     name = "button",
     src = "Button.tsx",
@@ -19,7 +21,7 @@ ts_module(
     visibility = ["PUBLIC"]
 )
 
-jest(
+ts_jest(
     name = "button_test",
     src = "Button.spec.ts",
     deps = [

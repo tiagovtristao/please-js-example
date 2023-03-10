@@ -6668,7 +6668,7 @@ def load_package_json(name:str):
 
     npm_library(
         name = "json5",
-        archive = ":json5_2.2.1",
+        archive = ":json5_2.2.2",
         install_dir = "node_modules/json5",
     )
 
@@ -7831,7 +7831,7 @@ def load_package_json(name:str):
 
     npm_library(
         name = "typescript",
-        archive = ":typescript_4.6.3",
+        archive = ":typescript_4.9.4",
         install_dir = "node_modules/typescript",
         visibility = ["PUBLIC"],
     )
@@ -8393,10 +8393,6 @@ def load_package_json(name:str):
             ":_require-directory#lib",
             ":_y18n#lib",
             ":_yargs-parser#lib",
-            ":_jest-junit#lib",
-            ":_mkdirp#lib",
-            ":_uuid#lib",
-            ":_xml#lib",
         ],
         visibility = ["PUBLIC"],
     )
@@ -10089,9 +10085,9 @@ def load_package_json(name:str):
     )
 
     remote_file(
-        name = "json5_2.2.1",
-        url = "https://registry.npmjs.org/json5/-/json5-2.2.1.tgz",
-        out = "json5-2.2.1.tgz",
+        name = "json5_2.2.2",
+        url = "https://registry.npmjs.org/json5/-/json5-2.2.2.tgz",
+        out = "json5-2.2.2.tgz",
     )
 
     remote_file(
@@ -10863,9 +10859,9 @@ def load_package_json(name:str):
     )
 
     remote_file(
-        name = "typescript_4.6.3",
-        url = "https://registry.npmjs.org/typescript/-/typescript-4.6.3.tgz",
-        out = "typescript-4.6.3.tgz",
+        name = "typescript_4.9.4",
+        url = "https://registry.npmjs.org/typescript/-/typescript-4.9.4.tgz",
+        out = "typescript-4.9.4.tgz",
     )
 
     remote_file(

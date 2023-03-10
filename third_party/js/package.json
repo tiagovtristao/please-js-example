@@ -33,10 +33,7 @@
     },
     "tools": {
       "jest": {
-        "library": "jest",
-        "dependencies": [
-          "jest-junit"
-        ]
+        "library": "jest"
       },
       "tsc": {
         "library": "typescript"

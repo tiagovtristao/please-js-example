@@ -1,0 +1,10 @@
+def ts_module(name:str, src:str, deps:list=[], visibility:list=[]):
+    return ts_project_module(
+        name = name,
+        src = src,
+        project_target = "//ops:_ts_project",
+        deps = deps,
+        visibility = visibility,
+    )
+
+

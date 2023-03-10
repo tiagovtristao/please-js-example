@@ -1,15 +1,17 @@
+subinclude("//ops/build_defs:ts_project")
+
 ts_module(
     name = "page",
     src = "Page.tsx",
     deps = [
         "//third_party/js:react",
-        "//copperkey",
+        "//copperkey/components:button",
         ":page_sass"
     ],
-    visibility = ["//ops/..."]
+    visibility = ["PUBLIC"],
 )
 
-jest(
+ts_jest(
     name = "page_test",
     src = "Page.spec.ts",
     deps = [
@@ -17,10 +19,10 @@ jest(
     ]
 )
 
-sass_file(
+filegroup(
     name = "page_sass",
-    src = "page.scss",
-    deps = [
+    srcs = ["page.scss"],
+    exported_deps = [
         "//copperkey:variables_sass",
     ],
     visibility = ["PUBLIC"],

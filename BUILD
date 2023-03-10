@@ -1,18 +1,23 @@
-plugin_repo(
+subrepo(
     name = "js",
-    plugin = "please-js",
-    owner = "tiagovtristao",
-    revision = "v0.0.1",
-)
-
-filegroup(
-    name = "tsconfig",
-    srcs = ["tsconfig.json"],
-    visibility = ["PUBLIC"],
+    dep = build_rule(
+        name = "js",
+        system_srcs = ["/home/ttristao/playground/please-js"],
+        cmd = "mv home/ttristao/playground/please-js $OUT",
+        outs = ["js"],
+        _subrepo = True,
+    ),
+    plugin = True,
 )
 
 filegroup(
     name = "jest_config",
     srcs = ["jest.config.js"],
+    visibility = ["PUBLIC"],
+)
+
+filegroup(
+    name = "tsconfig",
+    srcs = ["tsconfig.json"],
     visibility = ["PUBLIC"],
 )

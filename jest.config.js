@@ -7,4 +7,5 @@ module.exports = {
     "\\.(css|scss)$": "<rootDir>/build/js/testing/styleMock.js"
   },
   testEnvironment: "jsdom",
+
 };

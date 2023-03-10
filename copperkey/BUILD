@@ -1,18 +1,25 @@
+subinclude("//copperkey/build_defs:ts_project")
+
+ts_project()
+
 ts_module(
-    name = "copperkey",
+    name = "index",
     src = "index.ts",
-    deps = ["//copperkey/components:button"],
+    deps = [
+        "//copperkey/components:button",
+    ],
     visibility = ["PUBLIC"]
 )
 
-sass_file(
+
+filegroup(
     name = "base_sass",
-    src = "base.scss",
+    srcs = ["base.scss"],
     visibility = ["PUBLIC"],
 )
 
-sass_file(
+filegroup(
     name = "variables_sass",
-    src = "variables.scss",
+    srcs = ["variables.scss"],
     visibility = ["PUBLIC"],
 )

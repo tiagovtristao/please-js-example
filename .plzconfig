@@ -1,5 +1,5 @@
 [please]
-version = 16.20.2
+version = 16.26.1
 
 [parse]
 preloadsubincludes = ///js//build_defs:javascript
@@ -12,6 +12,12 @@ tsc = //third_party/js:tsc_tool
 jest = //third_party/js:jest_tool
 jesttypes = //third_party/js:@types_jest
 jestconfig = //:jest_config
+jestjunit = //third_party/js:jest-junit
 jestmodulemappers = //build/js/testing:styleMock
 esbuildlibrary = //third_party/js:esbuild
 
+; Feature flags
+[featureflags]
+;PackageOutputsStrictness = true
+NoIterSourcesMarked = true
+SingleSHA1Hash = true
